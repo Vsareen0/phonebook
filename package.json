@@ -1,5 +1,5 @@
 {
-  "name": "phonebook.github.io",
+  "name": "phonebook",
   "version": "1.0.0",
   "description": "A javascript based web application designed in plain HTML and CSS \r to save contacts and manipulate them.",
   "main": "app.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vsareen0/phonebook.github.io.git"
+    "url": "git+https://github.com/Vsareen0/phonebook.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Vsareen0/phonebook.github.io/issues"
+    "url": "https://github.com/Vsareen0/phonebook/issues"
   },
-  "homepage": "https://github.com/Vsareen0/phonebook.github.io#readme",
+  "homepage": "https://github.com/Vsareen0/phonebook#readme",
   "dependencies": {
     "express": "^4.17.1"
   }
