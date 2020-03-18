@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phonebook</title>
+    <link href="/public/style.css" rel="stylesheet">
+    <script src="https://use.fontawesome.com/79039e04ff.js"></script>
+    <script src="/public/main.js"></script>
+  </head>
+  <body>
+    
+    <div id="header">
+      <h2>Phone Book</h2>
+      <input
+        type="search"
+        name="search"
+        id="search"
+        onkeyup="searchName();"
+        placeholder="I am searching for person, phone number"
+      />
+    </div>
+
+    <div class="container">
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#" onclick="showAddContact();"
+              >&nbsp;&nbsp;&nbsp;<i
+                class="fa fa-plus-square"
+                aria-hidden="true"
+              ></i
+              >Add Contacts</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showViewContact();"
+              >&nbsp;&nbsp;&nbsp;<i class="fa fa-eye" aria-hidden="true"></i
+              >View All
+            </a>
+          </li>
+          <li>
+            <a href="#" onclick="showDeletedContact();"
+              >&nbsp;&nbsp;&nbsp;<i class="fa fa-trash" aria-hidden="true"></i
+              >Show Deleted</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showSearchedContact();"
+              >&nbsp;&nbsp;&nbsp;<i class="fa fa-search" aria-hidden="true"></i
+              >Show Last Searched</a
+            >
+          </li>
+          <li>
+            <a href="#" onclick="showFavoriteContact();"
+              >&nbsp;&nbsp;&nbsp;<i class="fa fa-star-o" aria-hidden="true"></i
+              >Marked Favourite</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="contact-list">
+        <div class="options"></div>
+        <table id="t2" border="0"></table>
+
+        <!-- Add Contact  -->
+        <div class="addContact">
+          <form method="post" onsubmit="return addContact();">
+            <table border="0">
+              <caption>
+                <h2>Add Contacts</h2>
+              </caption>
+              <tr>
+                <th>
+                  <label for="name">Name</label>
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    placeholder="Enter Name"
+                    autofocus
+                  />
+                </td>
+                <th>
+                  <label for="title">Title</label>
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    name="title"
+                    id="title"
+                    placeholder="Enter title"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="company">Company</label>
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    placeholder="Enter Company"
+                  />
+                </td>
+                <th>
+                  <label for="email">Email</label>
+                </th>
+                <td>
+                  <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="Enter email"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="number">Phone</label>
+                </th>
+                <td>
+                  <input
+                    type="text"
+                    name="number"
+                    id="number"
+                    placeholder="Enter phone"
+                  />
+                </td>
+                <th>
+                  <label for="date">Created Date</label>
+                </th>
+                <td>
+                  <input
+                    type="date"
+                    name="date"
+                    id="date"
+                    placeholder="Choose Date"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td colspan="4" align="center">
+                  <input
+                    type="submit"
+                    name="Submit"
+                    value="Add Contact"
+                    id="add"
+                  />
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+
+        <!-- Searched Items List -->
+        <div class="searchedItemsList">
+          <ul id="searchedItemsList"></ul>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
