@@ -1,10 +1,16 @@
 (function(){
-		displayContact();
+		showViewContact();
 	})();
 
 
 	function displayContact(){
+		var contacts = JSON.parse(localStorage.contacts);
 		var table = document.getElementById("t2");
+
+		if(contacts.length === 0){
+			return table.innerHTML = `<tr><td colspan="6">No contacts found</td></tr>`;
+		}
+		
 		var t = "";	
 		t = `<tr>
 		<th><input type='checkbox'></th>
@@ -205,6 +211,7 @@
 		
 		contacts.push([name,title,company,email,number,date,0]);
 		localStorage.setItem("contacts",JSON.stringify(contacts));
+		displayContact();
 	}
 
 	function deleteContact(id){

@@ -4,12 +4,35 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Phonebook</title>
-    <link href="static/style.css" rel="stylesheet">
+    <link href="static/style.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/79039e04ff.js"></script>
     <script src="static/main.js"></script>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+      table {
+        overflow: auto;
+      }
+      @media screen and (max-width: 750px) {
+        #header h2 {
+          display: none;
+        }
+        .container {
+          display: flex;
+          flex-direction: column;
+        }
+        .menu {
+          display: flex;
+          flex-direction: row;
+          /* border: 1px solid black; */
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
-    
     <div id="header">
       <h2>Phone Book</h2>
       <input
@@ -62,11 +85,11 @@
 
       <div class="contact-list">
         <div class="options"></div>
-        <table id="t2" border="0"></table>
+        <table id="t2" border="0" x></table>
 
         <!-- Add Contact  -->
         <div class="addContact">
-          <form method="post" onsubmit="return addContact();">
+          <form onsubmit="addContact();">
             <table border="0">
               <caption>
                 <h2>Add Contacts</h2>
