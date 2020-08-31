@@ -7,5 +7,3 @@ to save contacts and manipulate them.
 
 Designed By : Vinamra Sareen
 
-## Under Newton Scool
-[Visit Newton School](https://www.newtonschool.co "Newton's Homepage")
